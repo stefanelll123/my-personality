@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <LangVersion>10</LangVersion>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyPersonality.Identity.Api\MyPersonality.Identity.Api.csproj" />
+    <ProjectReference Include="..\MyPersonality.Identity.Application\MyPersonality.Identity.Application.csproj" />
+    <ProjectReference Include="..\MyPersonality.Identity.Consumers\MyPersonality.Identity.Consumers.csproj" />
+    <ProjectReference Include="..\MyPersonality.Identity.DataAccess.Adapters\MyPersonality.Identity.DataAccess.Adapters.csproj" />
+  </ItemGroup>
+
+</Project>

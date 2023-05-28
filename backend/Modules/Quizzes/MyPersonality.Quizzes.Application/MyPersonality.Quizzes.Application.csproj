@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <LangVersion>10</LangVersion>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Infrastructure\MyPersonality.IntegrationEvents\MyPersonality.IntegrationEvents.csproj" />
+    <ProjectReference Include="..\MyPersonality.Quizzes.Interop\MyPersonality.Quizzes.Interop.csproj" />
+    <ProjectReference Include="..\MyPersonality.Quizzes.Domain\MyPersonality.Quizzes.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="11.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.JsonPatch" Version="7.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Dtos\" />
+    <Folder Include="Extensions\" />
+  </ItemGroup>
+
+</Project>

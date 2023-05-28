@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <LangVersion>10</LangVersion>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyPersonality.Quizzes.Api\MyPersonality.Quizzes.Api.csproj" />
+    <ProjectReference Include="..\MyPersonality.Quizzes.Application\MyPersonality.Quizzes.Application.csproj" />
+    <ProjectReference Include="..\MyPersonality.Quizzes.Consumers\MyPersonality.Quizzes.Consumers.csproj" />
+    <ProjectReference Include="..\MyPersonality.Quizzes.DataAccess.Adapters\MyPersonality.Quizzes.DataAccess.Adapters.csproj" />
+  </ItemGroup>
+
+</Project>

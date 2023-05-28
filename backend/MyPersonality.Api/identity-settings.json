@@ -1,0 +1,7 @@
+﻿{
+  "Identity": {
+    "JwtSecret": "MyPersonalityBigSecretThatHasToBeALittleBitLonger",
+    "Issuer": "MyPersonality",
+    "Audience": "MyPersonality"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/api/v1/identity/login",
+      "UpstreamHttpMethod": [
+        "Post", "Options"
+      ],
+      "DownstreamPathTemplate": "/identity/v1/identity/login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5000
+        }
+      ],
+      "SwaggerKey": "Identity"
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/quizzes",
+      "UpstreamHttpMethod": [
+        "Get", "Post"
+      ],
+      "DownstreamPathTemplate": "/quizzes/v1/quizzes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5000
+        }
+      ],
+      "SwaggerKey": "Quizzes"
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/quizzes/{id}",
+      "UpstreamHttpMethod": [
+        "Get", "Patch", "Delete"
+      ],
+      "DownstreamPathTemplate": "/quizzes/v1/quizzes/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5000
+        }
+      ],
+      "SwaggerKey": "Quizzes"
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/quizzes/{id}/{submissionId}/placement",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "DownstreamPathTemplate": "/quizzes/v1/quizzes/{id}/{submissionId}/placement",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5000
+        }
+      ],
+      "SwaggerKey": "Quizzes"
+    },
+    {
+      "UpstreamPathTemplate": "/api/v1/quizSubmissions",
+      "UpstreamHttpMethod": [
+        "Post"
+      ],
+      "DownstreamPathTemplate": "/quizzes/v1/quizSubmissions",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5000
+        }
+      ],
+      "SwaggerKey": "Quizzes"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:5001"
+  },
+  "SwaggerEndPoints": [
+    {
+      "Key": "Quizzes",
+      "Config": [
+        {
+          "Name": "Quizzes Service API",
+          "Version": "v1",
+          "Url": "http://localhost:5000/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "Identity",
+      "Config": [
+        {
+          "Name": "Identity Service API",
+          "Version": "v1",
+          "Url": "http://localhost:5000/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "aggregation",
+      "Config": [
+        {
+          "Name": "Aggregations Service API",
+          "Version": "v1",
+          "Url": "http://localhost:5002/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ]
+}
