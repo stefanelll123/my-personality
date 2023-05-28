@@ -1,0 +1,8 @@
+<nb-card size="tiny" accent="info">
+  <nb-card-header>{{quiz.title}}</nb-card-header>
+  <nb-card-body>{{quiz.description}}</nb-card-body>
+  <nb-card-footer>
+    <button *ngIf="authService.isAuthenticated()" type="submit" nbButton outline shape="semi-round" status="success" size="small" (click)="openEditQuizSubmission()"><nb-icon icon="edit"></nb-icon>Edit</button>
+    <button type="submit" nbButton outline shape="semi-round" status="primary" size="small" (click)="openQuizSubmission()">Start</button>
+  </nb-card-footer>
+</nb-card>

@@ -1,0 +1,22 @@
+h6 {
+  margin: 20px 0 10px 0;
+}
+
+nb-menu ::ng-deep li {
+  &:first-of-type {
+    border-top: 1px solid #edf1f7 !important;
+  }
+
+  &:last-of-type {
+    border-bottom: 1px solid #edf1f7 !important;
+  }
+
+  a.active {
+    background-color: #36f !important;
+    color: #fff !important;
+
+    .menu-icon {
+      color: #fff !important;
+    }
+  }
+}

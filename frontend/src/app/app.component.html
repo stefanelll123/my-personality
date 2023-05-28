@@ -1,0 +1,32 @@
+<app-loader></app-loader>
+<app-alerts></app-alerts>
+
+<ng-container *ngIf="!isTemplatePage(); else templatePage">
+  <router-outlet></router-outlet>
+</ng-container>
+
+<ng-template #templatePage>
+  <nb-layout>
+    <nb-layout-header fixed>
+      <div class="header">
+        <img src="../assets/logo.png">
+        <div *ngIf="authService.isAuthenticated()">
+          <nb-user [name]="getAuthenticatedUserName()"></nb-user>
+        </div>
+        <nb-icon [icon]="getCollapsableMenuIcon()" (click)="showMenu()"></nb-icon>
+      </div>
+    </nb-layout-header>
+    <nb-sidebar tag="menu" [ngClass]="{'fade': isCollapsable === false}">
+      <div>
+        <app-menu></app-menu>
+      </div>
+    </nb-sidebar>
+    <nb-layout-column>
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+    </nb-layout-column>
+  </nb-layout>
+</ng-template>
+
+

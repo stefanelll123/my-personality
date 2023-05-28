@@ -1,0 +1,21 @@
+.alerts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: absolute;
+
+    width: 100%;
+    bottom: 0;
+    margin-bottom: 10px;
+
+    z-index: 9998;
+
+    nb-alert {
+      width: 80%;
+      display: flex;
+      align-self: center;
+
+      margin-bottom: 10px;
+    }
+}

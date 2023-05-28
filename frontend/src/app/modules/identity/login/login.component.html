@@ -1,0 +1,26 @@
+<nb-layout>
+  <nb-layout-column class="left-column">
+    <img class="logo" src="../assets/logo.png">
+    <div class="login-form">
+      <h3>Login</h3>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <input nbInput
+          formControlName="email"
+          [status]="loginForm.get('email')?.touched && loginForm.get('email')?.invalid ? 'danger' : ''"
+          type="email"
+          placeholder="Email">
+        <input nbInput
+          formControlName="password"
+          [status]="loginForm.get('password')?.touched && loginForm.get('password')?.invalid ? 'danger' : ''"
+          type="password"
+          placeholder="Password">
+        <div class="options">
+          <nb-checkbox>Remember me</nb-checkbox>
+          <p (click)="redirectToPasswordRecorery()">Forgot password?</p>
+        </div>
+        <button type="submit" nbButton shape="semi-round" status="primary">Login</button>
+      </form>
+    </div>
+  </nb-layout-column>
+  <nb-layout-column></nb-layout-column>
+</nb-layout>

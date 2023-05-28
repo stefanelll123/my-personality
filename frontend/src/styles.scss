@@ -1,0 +1,28 @@
+@import 'themes';
+@import '~@nebular/theme/styles/globals';
+
+@include nb-install() {
+  @include nb-theme-global();
+};
+
+html, body { height: calc(100% - 66px); }
+
+@font-face {
+  font-family: 'Open Sans Light';
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTRa1RVmPjeKy21_GQJaLlJI.woff) format('woff');
+}
+
+.input-with-label {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    margin-bottom: 5px;
+  }
+
+  input {
+    margin-bottom: 10px;
+  }
+}

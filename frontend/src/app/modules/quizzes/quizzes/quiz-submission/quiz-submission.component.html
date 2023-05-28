@@ -1,0 +1,21 @@
+<nb-card>
+  <nb-card-body>
+    <nb-stepper *ngIf="!!quiz" orientation="horizontal" [linear]="true" [disableStepNavigation]="true">
+      <nb-step *ngFor="let question of questions; let index = index">
+        <h4>{{question.description}}</h4>
+        <nb-radio-group [formControl]="questionAnswerForms[question.id]">
+          <nb-radio *ngFor="let answer of question.answers"
+            [value]="answer.id">
+            {{ answer.description }}
+          </nb-radio>
+        </nb-radio-group>
+        <footer>
+          <button *ngIf="questions.length - 1 != index; else submit" nbButton shape="semi-round" nbStepperNext [disabled]="!isQuestionAnswerd(question.id)">next</button>
+          <ng-template #submit>
+            <button nbButton shape="semi-round" status="primary" [disabled]="!isQuestionAnswerd(question.id)" (click)="createQuizSubmission()">Submit</button>
+          </ng-template>
+        </footer>
+      </nb-step>
+    </nb-stepper>
+  </nb-card-body>
+</nb-card>

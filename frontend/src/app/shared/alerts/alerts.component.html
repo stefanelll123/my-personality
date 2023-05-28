@@ -1,0 +1,3 @@
+<div class="alerts">
+  <nb-alert *ngFor="let alert of service.alerts" status="danger" closable (close)="close(alert.id)">{{alert.message}}</nb-alert>
+</div>
